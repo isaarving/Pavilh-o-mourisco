@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR.js Example</title>
+    <!-- Incluindo o AR.js -->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/AR.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+    <!-- Definindo a cena em AR.js -->
+    <a-scene embedded arjs>
+        <!-- Definindo o marcador -->
+        <a-marker preset="hiro">
+            <!-- Modelo 3D -->
+            <a-entity 
+                gltf-model="url(modelo.glb)" 
+                scale="0.5 0.5 0.5" 
+                position="0 0 0" 
+                rotation="0 180 0">
+            </a-entity>
+        </a-marker>
+
+        <!-- Câmera AR -->
+        <a-entity camera></a-entity>
+    </a-scene>
+
+</body>
+</html>
